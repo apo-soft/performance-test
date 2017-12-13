@@ -17,4 +17,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <modules>
+  	<module>jmeter-java-dubbo-parent</module>
+  </modules>
 </project>
