@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cn.aposoft.dubbo.demo.jmeter.sonsumer;
+package cn.aposoft.dubbo.demo.jmeter.consumer;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -36,7 +36,7 @@ public class Provider {
 //		registry.setAddress("224.5.6.7");
 //		registry.setProtocol("multicast");
 
-		registry.setAddress("10.152.4.90:2181,10.152.4.90:2182,10.152.4.90:2183");
+		registry.setAddress("10.143.117.21:2182,10.143.117.21:2183");
 		registry.setProtocol("zookeeper");
 		
 		// 服务提供者协议配置

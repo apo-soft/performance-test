@@ -22,7 +22,7 @@
 		<log4j.version>2.10.0</log4j.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<springboot.version>1.5.9.RELEASE</springboot.version>
-		<dubbo.version>2.5.8</dubbo.version>
+		<dubbo.version>2.5.4</dubbo.version>
 		<io.netty.version>4.1.19.Final</io.netty.version>
 	</properties>
 	<modules>
