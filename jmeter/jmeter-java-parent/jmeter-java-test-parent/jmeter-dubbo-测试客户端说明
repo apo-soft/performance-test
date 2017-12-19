@@ -1,0 +1,5 @@
+1. 本次验证使用的是2.5.8版本dubbo
+2. 本次用例验证multicast，zookeeper两种协议
+3. 不要使用虚拟机网卡，VPN等设备，会导致dubbo连接出现访问问题
+4. 在将客户端部署到jmeter目录时，请事先将jline-0.9.94.jar dubbo-2.5.8.jar javassist-3.20.0-GA.jar netty-3.10.6.Final.jar, zkclient-0.10.jar zookeeper-3.4.8.jar
+       放入指定目录，每次进发布测试文件jar即可。
