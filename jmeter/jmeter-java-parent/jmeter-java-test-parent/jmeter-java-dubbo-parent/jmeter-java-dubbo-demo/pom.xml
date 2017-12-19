@@ -20,5 +20,8 @@
 	</properties>
 	<modules>
 		<module>jmeter-dubbo-demo-api</module>
+		<module>java-dubbo-demo-provider</module>
+		<module>java-dubbo-demo-consumer</module>
+		<module>jmeter-java-dubbo-demo-consumer</module>
 	</modules>
 </project>
