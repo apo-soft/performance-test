@@ -37,22 +37,32 @@ public class DubboReferenceManager {
 		if (reference != null) {
 			return;
 		}
-		// 当前应⽤配置
-		ApplicationConfig application = new ApplicationConfig();
-		application.setName(context.getParameter("name"));
-		// 连接注册中⼼配置
-		RegistryConfig registry = new RegistryConfig();
-		registry.setAddress(context.getParameter("address"));
-		registry.setProtocol(context.getParameter("protocol"));
 		// 注意：ReferenceConfig为重对象，内部封装了与注册中⼼的连接，以及与服务提供⽅的连接
 		// 引⽤远程服务
 		reference = new ReferenceConfig<>();
-		// 此实例很重，封装了与注册中⼼的连接以及与提供者的连接，请⾃⾏缓存，否则可能造成内存和连接泄漏
-		reference.setApplication(application);
-		reference.setRegistry(registry); // 多个注册中⼼可以⽤setRegistries()
-
 		reference.setInterface(clazz);
 		// reference.setVersion("1.0.0");
+		
+		// 当前应⽤配置
+		ApplicationConfig application = new ApplicationConfig();
+		application.setName(context.getParameter("name"));
+		// 此实例很重，封装了与注册中⼼的连接以及与提供者的连接，请⾃⾏缓存，否则可能造成内存和连接泄漏
+		reference.setApplication(application);
+		
+		// 连接注册中⼼配置
+		RegistryConfig registry = new RegistryConfig();
+
+		if ("direct".equals(context.getParameter("type"))) {
+			reference.setUrl(context.getParameter("direct-reference"));
+		} else {
+			registry.setAddress(context.getParameter("address"));
+			registry.setProtocol(context.getParameter("protocol"));
+			reference.setRegistry(registry); // 多个注册中⼼可以⽤setRegistries()
+		}
+
+
+
+		
 		// 和本地bean⼀样使⽤xxxService
 		invokerCount.set(0);
 	}

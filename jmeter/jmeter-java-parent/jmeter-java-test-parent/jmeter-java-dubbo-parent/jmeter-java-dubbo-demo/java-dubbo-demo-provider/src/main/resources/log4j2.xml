@@ -54,7 +54,7 @@
 
 		<!--com.gomefinance包下的日志异步输出 includeLocation:包含本地信息；additivity：不继承父类的日志输出 -->
 		<!--建立一个默认的root的logger -->
-		<root level="all">
+		<root level="info">
 			<appender-ref ref="Console" />
 		</root>
 	</Loggers>
